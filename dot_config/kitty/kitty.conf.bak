@@ -1,0 +1,9 @@
+font_family JetBrains Mono
+shell zsh
+include colors.conf
+
+
+# BEGIN_KITTY_THEME
+# Belafonte Night
+include current-theme.conf
+# END_KITTY_THEME

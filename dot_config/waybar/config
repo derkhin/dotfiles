@@ -1,0 +1,71 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu","memory","pulseaudio", "network", "battery"],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "icon-1": "●",
+    "icon-2": "●",
+    "icon-3": "●",
+    "icon-4": "●",
+    "icon-5": "●",
+    "icon-focused": "◉",
+    "disable-scroll": true,
+    "tooltip": false,
+    "icon-focused": "󰏧" // bigger or filled circle for focused workspace
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default":"",
+      "empty": ""
+    },
+   "persistent-workspaces": {
+      "*": [ 1,2,3,4,5 ]
+    }
+  },
+
+  "cpu": {
+  "interval": 2,
+  "format": "  {usage}%",
+  "tooltip": false
+  },
+
+  "memory": {
+  "interval": 2,
+  "format": "  {percentage}%",
+  "tooltip": false
+  },
+
+
+
+  "clock": {
+    "format": "  {:%I:%M %p | %a, %b %d}"
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "  muted"
+  },
+
+  "network": {
+    "format-disconnected": "offline",
+    "interval": 1,
+    "format-wifi": "  {bandwidthDownBytes}/{bandwidthUpBytes}",
+    "format-ethernet": "󰈀  {bandwidthDownBytes}",
+    "tooltip-format": "↓ {bandwidthDownBits}\n↑ {bandwidthUpBits}"
+  },
+
+  "battery": {
+    "format": "  {capacity}%",
+    "format-charging": "  {capacity}%"
+  }
+}
