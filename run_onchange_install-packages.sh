@@ -1,5 +1,19 @@
 #!/bin/sh
-sudo pacman -Syu --noconfirm zsh kitty hyprlock waybar hyprpaper
+sudo pacman -Syu --noconfirm zsh kitty hyprlock waybar hyprpaper rofi hyprshot satty
+
+# audio driver
+sudo pacman -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
+
+#docker setup
+sudo pacman -S --noconfirm docker docker-compose
+
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+
+sudo usermod -aG docker $USER && newgrp docker
+
+sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
 # To install yay uncomment below lines and run chezmoi apply
 
