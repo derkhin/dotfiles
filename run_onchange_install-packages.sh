@@ -5,6 +5,9 @@ sudo pacman -Syu --noconfirm zsh kitty hyprlock waybar hyprpaper rofi hyprshot s
 sudo pacman -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
+#file manager
+sudo pacman -S --noconfirm thunar thunar-archive-plugin thunar-volman gvfs udisks2 nwg-look
+
 #docker setup
 sudo pacman -S --noconfirm docker docker-compose
 
