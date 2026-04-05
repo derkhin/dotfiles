@@ -5,7 +5,7 @@
   "margin-top": 10,
   "margin-left": 10,
   "margin-right": 10,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["custom/power","hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["cpu","memory","pulseaudio", "network", "battery"],
   "hyprland/workspaces": {
@@ -64,6 +64,11 @@
     "tooltip-format": "↓ {bandwidthDownBits}\n↑ {bandwidthUpBits}"
   },
 
+  "custom/power": {
+    "format": "",
+    "on-click": "$XDG_CONFIG_HOME/rofi/powermenu/type-2/powermenu.sh"
+  },
+ 
   "battery": {
     "format": "  {capacity}%",
     "format-charging": "  {capacity}%"

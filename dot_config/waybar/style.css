@@ -1,80 +1,89 @@
 * {
-  font-family: "JetBrains Mono";
-  font-size: 14px;
-  min-height: 0;
+	font-family: "JetBrains Mono";
+	font-size: 14px;
+	min-height: 0;
 }
 
 window#waybar {
-  background: transparent;
+	background: transparent;
 }
 
-.modules-left {
-    border-radius:10px;
-    background: rgba(17, 17, 27, 0.7);
+#workspaces {
+	border-radius: 10px;
+	background: rgba(17, 17, 27, 0.7);
 }
 
 .modules-center {
-    border-radius:10px;
-    background:  rgba(17, 17, 27, 0.7);
+	border-radius: 10px;
+	background: rgba(17, 17, 27, 0.7);
 }
 
 .modules-right {
-    border-radius:10px;
-    background: alpha(@background,.6);
-    background: rgba(17, 17, 27, 0.7);
+	border-radius: 10px;
+	background: alpha(@background, .6);
+	background: rgba(17, 17, 27, 0.7);
 }
 
 #workspaces button {
-  padding: 0 6px;
-  margin: 0 4px;
-  border-radius: 4px;
-  font-size: 12px;
-  background: transparent;
-  color: #888;
+	padding: 0 6px;
+	margin: 0 4px;
+	border-radius: 4px;
+	font-size: 12px;
+	background: transparent;
+	color: #888;
 }
 
 #workspaces button.active {
-  color: #fff;
+	color: #fff;
 }
 
 #workspaces button:hover {
- background: transparent;
- border: none
+	background: transparent;
+	border: none
 }
 
-
 #battery.charging {
-  color: #a6e3a1;
+	color: #a6e3a1;
 }
 
 #battery.warning {
-  color: #f9e2af;
+	color: #f9e2af;
 }
 
 #battery.critical {
-  color: #f38ba8;
+	color: #f38ba8;
 }
+
 #network {
-  color: #cdd6f4;
+	color: #cdd6f4;
 }
+
 #cpu {
-  padding: 0 8px;
-  color: #d0d0d0;
+	padding: 0 8px;
+	color: #d0d0d0;
 }
 
 #cpu.warning {
-  color: #f9e2af;
+	color: #f9e2af;
 }
 
 #cpu.critical {
-  color: #f38ba8;
+	color: #f38ba8;
 }
 
 #memory {
-  padding: 0 8px;
-  color: #d0d0d0;
+	padding: 0 8px;
+	color: #d0d0d0;
 }
 
+#custom-power {
+	background: #AE2448;
+	border-radius: 10px;
+	padding: 0 10px;
+	padding-right: 13px;
+	margin-right:4px;
+	color: #ffffff
+}
 
 #cpu,
 #memory,
@@ -82,6 +91,6 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery {
-  padding: 0 10px;
-  color: #ffffff;
+	padding: 0 10px;
+	color: #ffffff;
 }
