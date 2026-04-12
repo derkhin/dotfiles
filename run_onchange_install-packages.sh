@@ -13,6 +13,7 @@ sudo pacman -S --noconfirm docker docker-compose
 
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
+sudo systemctl disable sddm.service
 
 sudo usermod -aG docker $USER && newgrp docker
 
