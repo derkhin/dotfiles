@@ -118,3 +118,6 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 export PATH=/home/irfan/.opencode/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+export GOOGLE_CLOUD_PROJECT=fynd-jio-impetus-prod
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/gcloud/application_default_credentials.json"
+export VERTEX_LOCATION=global
