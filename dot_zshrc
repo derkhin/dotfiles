@@ -117,3 +117,4 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # opencode
 export PATH=/home/irfan/.opencode/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
