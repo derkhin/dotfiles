@@ -113,9 +113,14 @@ source $ZSH/oh-my-zsh.sh
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-autoload -U compinit
-compinit
+# Zsh completions (brew)
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
+
+# Zsh autosuggestions (brew)
+# source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # opencode
 export PATH=/home/irfan/.opencode/bin:$PATH
