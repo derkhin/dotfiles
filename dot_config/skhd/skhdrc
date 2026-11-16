@@ -1,0 +1,6 @@
+# Ctrl+number: switch to the assigned desktop and open/focus its app.
+# Homebrew paths for this Apple Silicon Mac.
+ctrl - 1 : /opt/homebrew/bin/yabai -m space --focus 1 && /usr/bin/open -a "Slack"
+ctrl - 2 : /opt/homebrew/bin/yabai -m space --focus 2 && /usr/bin/open -a "Google Chrome"
+ctrl - 3 : /opt/homebrew/bin/yabai -m space --focus 3 && /usr/bin/open -a "WezTerm"
+ctrl - 4 : /opt/homebrew/bin/yabai -m space --focus 4 && /usr/bin/open -a "Visual Studio Code"

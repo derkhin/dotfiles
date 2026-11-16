@@ -1,0 +1,24 @@
+#!/bin/sh
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
+# Keep normal window placement; use yabai for desktop assignments.
+yabai -m config layout float
+yabai -m config focus_follows_mouse off
+yabai -m config mouse_follows_focus off
+
+# Create four desktops in Mission Control before starting yabai.
+yabai -m space 1 --label slack
+yabai -m space 2 --label chrome
+yabai -m space 3 --label terminal
+yabai -m space 4 --label code
+
+# Apply to new windows and to existing windows when this config loads.
+yabai -m rule --add label=desktop-slack app='^Slack$' space=1
+yabai -m rule --add label=desktop-chrome app='^Google Chrome$' space=2
+yabai -m rule --add label=desktop-terminal app='^WezTerm$' space=3
+yabai -m rule --add label=desktop-code app='^(Code|Visual Studio Code)$' space=4
+
+for rule in desktop-slack desktop-chrome desktop-terminal desktop-code; do
+  yabai -m rule --apply "$rule"
+done
